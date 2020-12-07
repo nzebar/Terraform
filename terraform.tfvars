@@ -1,0 +1,2 @@
+rgname="TESTlabPoc"
+rglocation="eastus"
