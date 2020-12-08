@@ -1,2 +1,0 @@
-rgname="TESTlabPoc"
-rglocation="eastus"
