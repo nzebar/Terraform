@@ -1,7 +1,7 @@
-resource "azurerm_availability_set" "avs1" {
-  name                = "avs1"
-  location            = azurerm_resource_group.RecGroupTestlab.location
-  resource_group_name = azurerm_resource_group.RecGroupTestlab.name
-
-  
+//Start of Availability Set 1
+  resource "azurerm_availability_set" "availset" {
+    name                = var.availset1name
+    location            = "eastus"
+    resource_group_name = azurerm_resource_group.TESTlab.name
 }
+//End of Availibility Set 1
