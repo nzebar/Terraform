@@ -42,8 +42,8 @@
         LB1backendPool1name="LB1backendPool1"
     //End of LB1 Deployment Values
     //LB2 Values
-        LB1name="LB2"
-        LB1pubIPname="LB2pubIP"
-        LB1backendPool1name="LB2backendPool1"
+        LB2name="LB2"
+        LB2pubIPname="LB2pubIP"
+        LB2backendPool1name="LB2backendPool1"
     //End of LB2 Deployment Values
 //End of Load Balancer Deployment Values
