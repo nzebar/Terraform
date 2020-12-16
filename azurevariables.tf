@@ -12,10 +12,15 @@
 
 //Availability Set Variables
     //Start of Availability Set 1
-        variable "availset1name" {
+        variable "avset1name" {
             type = string
         }
     //End of Availability Set 1
+    //Start of Availability Set 2
+        variable "avset2name" {
+            type = string
+        }
+    //End of Availability Set 2
 //End of Availability Set Variables
 
 
@@ -37,12 +42,6 @@
                 type = string
             }
                 variable "subnet2addressprefix" {
-                    type = list(string)
-                }
-            variable "subnet3name" {
-                type = string
-            }
-                variable "subnet3addressprefix" {
                     type = list(string)
                 }
     //End of Virtual Network 1
@@ -99,4 +98,16 @@
             type = string
         }
     //End of LB1 Variables
+
+    //Start of LB2 Variables
+        variable "LB2name" {
+            type = string
+        }
+        variable "LB2pubIPname" {
+            type = string
+        }
+        variable "LB2backendPool1name" {
+            type = string
+        }
+    //End of LB2 Variables
 //End of Load Balancer Deployment Variables

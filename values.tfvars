@@ -4,7 +4,8 @@
 //End of Resource Group Deployment Values
 
 //Availability Set Deployment Values
-    availset1name="AvailabilitySet1"
+    avset1name="AvailabilitySet1"
+    avset2name="AvailabilitySet2"
 //End of Availability Set Deployment Values
  
 //Virtual Network Deployment Values
@@ -14,8 +15,6 @@
             subnet1addressprefix = ["10.11.1.0/24"]
         subnet2name="subnet2"
             subnet2addressprefix = ["10.11.2.0/24"]
-        subnet3name="subnet3"
-            subnet3addressprefix = ["10.11.3.0/24"]
 //End of Virtual Network Deployment Values
 
 //Virtual Machine Deployment Values
@@ -42,4 +41,9 @@
         LB1pubIPname="LB1pubIP"
         LB1backendPool1name="LB1backendPool1"
     //End of LB1 Deployment Values
+    //LB2 Values
+        LB1name="LB2"
+        LB1pubIPname="LB2pubIP"
+        LB1backendPool1name="LB2backendPool1"
+    //End of LB2 Deployment Values
 //End of Load Balancer Deployment Values
