@@ -24,7 +24,6 @@ resource "azurerm_public_ip" "LB1pubIP1356" {
   location            = azurerm_resource_group.TESTlab.location
   allocation_method   = "Static"
   sku = "standard"
-  domain_name_label   = "contosoenterprise"
 }
 
 resource "azurerm_public_ip" "LB1pubIP2356" {
@@ -33,7 +32,6 @@ resource "azurerm_public_ip" "LB1pubIP2356" {
   location            = azurerm_resource_group.TESTlab.location
   allocation_method   = "Static"
   sku = "standard"
-  domain_name_label   = "mailcontosoenterprise"
 }
 
 //Deployment of 2 Backend Address Pools for LB1
@@ -83,7 +81,7 @@ resource "azurerm_lb_outbound_rule" "LB1outboundrule2356" {
 resource "azurerm_lb_nat_rule" "LB1natrule11356" {
   resource_group_name            = azurerm_resource_group.TESTlab.name
   loadbalancer_id                = azurerm_lb.LB1.id
-  name                           = "RDPnaterule1VM1356"
+  name                           = "RDPnatrule1VM1356"
   protocol                       = "Tcp"
   frontend_port                  = 3389
   backend_port                   = 3389
@@ -93,7 +91,7 @@ resource "azurerm_lb_nat_rule" "LB1natrule11356" {
 resource "azurerm_lb_nat_rule" "LB1natrule21356" {
   resource_group_name            = azurerm_resource_group.TESTlab.name
   loadbalancer_id                = azurerm_lb.LB1.id
-  name                           = "HTTPnatrule1AccessVM1356"
+  name                           = "HTTPnatrule1VM1356"
   protocol                       = "Tcp"
   frontend_port                  = 443
   backend_port                   = 443

@@ -30,7 +30,7 @@ resource "azurerm_subnet" "subnet1" {
     protocol                   = "Tcp"
     source_port_range          = "3389"
     destination_port_range     = "3389"
-    source_address_prefix      = "107.11.41.205"
+    source_address_prefix      = ""
     destination_address_prefix = "10.11.1.16"
     }
 
@@ -43,7 +43,31 @@ resource "azurerm_subnet" "subnet1" {
     source_port_range          = "3389"
     destination_port_range     = "3389"
     source_address_prefix      = "10.11.1.16"
-    destination_address_prefix = "107.11.41.205"
+    destination_address_prefix = ""
+    }
+
+    security_rule {
+    name                       = "nsg2HTTPsubnet1in"
+    priority                   = 120
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "3389"
+    destination_port_range     = "3389"
+    source_address_prefix      = ""
+    destination_address_prefix = "10.11.1.16"
+    }
+
+    security_rule {
+    name                       = "nsg2HTTPsubnet1out"
+    priority                   = 120
+    direction                  = "Outbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "3389"
+    destination_port_range     = "3389"
+    source_address_prefix      = "10.11.1.16"
+    destination_address_prefix = ""
     }
   }
   
@@ -55,7 +79,7 @@ resource "azurerm_subnet" "subnet2" {
 }
 
    resource "azurerm_network_security_group" "nsgsubnet2" {
-    name                = "nsgsubnet"
+    name                = "nsgsubnet2"
     location            = azurerm_resource_group.TESTlab.location
     resource_group_name = azurerm_resource_group.TESTlab.name
 
@@ -67,7 +91,7 @@ resource "azurerm_subnet" "subnet2" {
     protocol                   = "Tcp"
     source_port_range          = "3389"
     destination_port_range     = "3389"
-    source_address_prefix      = "107.11.41.205"
+    source_address_prefix      = ""
     destination_address_prefix = "10.11.1.16"
     }
 
@@ -80,7 +104,31 @@ resource "azurerm_subnet" "subnet2" {
     source_port_range          = "3389"
     destination_port_range     = "3389"
     source_address_prefix      = "10.11.1.16"
-    destination_address_prefix = "107.11.41.205"
+    destination_address_prefix = ""
+    }
+
+    security_rule {
+    name                       = "nsg2HTTPsubnet2in"
+    priority                   = 120
+    direction                  = "Inbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "3389"
+    destination_port_range     = "3389"
+    source_address_prefix      = ""
+    destination_address_prefix = "10.11.1.16"
+    }
+
+    security_rule {
+    name                       = "nsg2HTTPsubnet2out"
+    priority                   = 120
+    direction                  = "Outbound"
+    access                     = "Allow"
+    protocol                   = "Tcp"
+    source_port_range          = "3389"
+    destination_port_range     = "3389"
+    source_address_prefix      = "10.11.1.16"
+    destination_address_prefix = ""
     }
   }
  

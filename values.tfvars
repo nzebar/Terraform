@@ -19,7 +19,7 @@
 
 //Virtual Machine Deployment Values
     //VM1356 Values
-        VM1356name="VM1356"
+        VM1356name="adVM1356"
         VM1356size="Standard_D2s_v3"
         VM1356adminusername="AdminDC"
         VM1356adminpassword="Networking2!"
@@ -27,7 +27,7 @@
     //End of VM1356 Values
 
     //VM2356 Values
-        VM2356name="VM2356"
+        VM2356name="exVM2356"
         VM2356size="Standard_D2s_v3"
         VM2356adminusername="AdminEX"
         VM2356adminpassword="Networking2!"

@@ -9,6 +9,7 @@
     admin_password      = var.VM1356adminpassword
     network_interface_ids = [azurerm_network_interface.VM1356interface1.id,]
     availability_set_id = azurerm_availability_set.avset1.id
+    source_image_id = ""
 
     os_disk {
         caching              = "ReadWrite"
@@ -32,8 +33,9 @@
     admin_username      = var.VM2356adminusername
     admin_password      = var.VM2356adminpassword
     network_interface_ids = [
-        azurerm_network_interface.VM2356interface1.id,]
+    azurerm_network_interface.VM2356interface1.id,]
     availability_set_id = azurerm_availability_set.avset2.id
+    source_image_id = ""
 
     os_disk {
         caching              = "ReadWrite"
